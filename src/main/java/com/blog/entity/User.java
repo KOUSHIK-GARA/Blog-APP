@@ -1,13 +1,14 @@
 package com.blog.entity;
 
-import lombok.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
+@Entity
+@Table(name="users")
 public class User {
+
+    @Id
     private String userId;
     private String username;
     private String password;
