@@ -11,9 +11,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UpdateRoleRequest {
-    @NotNull(message = "roleId cannot be null")
-    @NotBlank(message = "roleId cannot be blank")
-    @NotEmpty(message = "roleId cannot be empty")
+    @NotNull(message = "role Id cannot be null")
+    @NotBlank(message = "role Id cannot be blank")
+    @NotEmpty(message = "role Id cannot be empty")
     private String roleId;
     private String roleName;
     private String roleDescription;

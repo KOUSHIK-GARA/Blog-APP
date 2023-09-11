@@ -33,6 +33,14 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response,HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(CategoryNotFoundException.class)
+    public ResponseEntity<APIResponse> categoryNotFoundExceptionHandler(CategoryNotFoundException exception){
+        List<Object> errors = new ArrayList<>();
+        errors.add(exception.getClass());
+        APIResponse response = new APIResponse(exception.getStatusCode(), BlogAppConstants.STATUS_FAILED,exception.getMessage(),errors);
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<APIResponse> handleInvalidMethodArguments(MethodArgumentNotValidException exception){
         List<Object> errors = new ArrayList<>();
