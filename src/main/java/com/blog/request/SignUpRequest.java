@@ -12,7 +12,7 @@ import lombok.*;
 public class SignUpRequest {
     @Email(message="Email address is not valid ")
     private String username;
-    @NotEmpty(message = "name must not be empty")
+    @NotEmpty(message = "name cannot be empty")
     private String name;
     @NotEmpty(message="password cannot be empty")
     @Size(min=3, max=10, message = "Password must be minimum of 3 characters and maximum of 10 characters")

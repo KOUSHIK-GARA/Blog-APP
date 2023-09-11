@@ -18,11 +18,19 @@ import java.util.Map;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(UserNotFoundException.class)
-    public ResponseEntity<APIResponse> UserNotFoundExceptionHandler(UserNotFoundException exception){
+    public ResponseEntity<APIResponse> userNotFoundExceptionHandler(UserNotFoundException exception){
         List<Object> errors = new ArrayList<>();
         errors.add(exception.getClass());
         APIResponse response = new APIResponse(exception.getStatusCode(), BlogAppConstants.STATUS_FAILED,exception.getMessage(),errors);
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(RoleNotFoundException.class)
+    public ResponseEntity<APIResponse> roleNotFoundExceptionHandler(RoleNotFoundException exception){
+        List<Object> errors = new ArrayList<>();
+        errors.add(exception.getClass());
+        APIResponse response = new APIResponse(exception.getStatusCode(),BlogAppConstants.STATUS_FAILED,exception.getMessage(),errors);
+        return new ResponseEntity<>(response,HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

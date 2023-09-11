@@ -28,6 +28,10 @@ public class BlogAppConstants {
     public static final String USER_UPDATED = "User updated Successfully";
     public static final String USER_FETCHED = "Users fetched Successfully";
     public static final String USER_DELETED = "User deleted Successfully";
+    public static final String ROLE_CREATED = "Role registered Successfully";
+    public static final String ROLE_UPDATED = "Role updated Successfully";
+    public static final String ROLE_FETCHED = "Roles fetched Successfully";
+    public static final String ROLE_DELETED = "Role deleted Successfully";
 
     /*
             USER ROLES
@@ -41,6 +45,7 @@ public class BlogAppConstants {
      */
 
     public static final String USER_NOT_FOUND = "User not found";
+    public static final String ROLE_NOT_FOUND = "Role not found";
     public static final String INVALID_REQUEST_BODY = "Invalid Request Body";
 
 }

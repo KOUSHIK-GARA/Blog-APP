@@ -13,9 +13,9 @@ import lombok.ToString;
 @ToString
 public class UpdateUsersRequest {
 
-    @NotNull(message = "userId must not be null")
-    @NotBlank(message = "userId must not be blank")
-    @NotEmpty(message = "userId must not be empty")
+    @NotNull(message = "userId cannot be null")
+    @NotBlank(message = "userId cannot be blank")
+    @NotEmpty(message = "userId canot be empty")
     private String userId;
     private String name;
     private String password;
