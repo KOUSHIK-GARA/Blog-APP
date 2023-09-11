@@ -1,6 +1,7 @@
 package com.blog.service.Impl;
 
 import com.blog.entity.User;
+import com.blog.exception.UserNotFoundException;
 import com.blog.request.FetchUsersRequest;
 import com.blog.request.SignUpRequest;
 import com.blog.request.UpdateUsersRequest;
@@ -37,7 +38,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UpdateUsersResponse updateUser(UpdateUsersRequest request) {
-        User user = this.userRepo.findById(request.getUserId()).orElseThrow(()-> new RuntimeException("User not found"));
+        User user = this.userRepo.findById(request.getUserId()).orElseThrow(()-> new UserNotFoundException(BlogAppConstants.USER_NOT_FOUND,BlogAppConstants.CODE_NOT_FOUND));
         if(request.getPassword() != null && !request.getPassword().isEmpty()){
             user.setPassword(request.getPassword());
         }
@@ -56,7 +57,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public FetchUsersResponse readAllUsers(FetchUsersRequest request) {
-        User user = this.userRepo.findById(request.getUserId()).orElseThrow(()-> new RuntimeException("User not found"));
+        User user = this.userRepo.findById(request.getUserId()).orElseThrow(()-> new UserNotFoundException(BlogAppConstants.USER_NOT_FOUND,BlogAppConstants.CODE_NOT_FOUND));
         FetchUsersResponse fetchResponse = new FetchUsersResponse();
         List<User> usersList = this.userRepo.findAll();
 
@@ -81,7 +82,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteUser(String userId) {
-        User user = this.userRepo.findById(userId).orElseThrow(()-> new RuntimeException("User not found"));
+        User user = this.userRepo.findById(userId).orElseThrow(()-> new UserNotFoundException(BlogAppConstants.USER_NOT_FOUND,BlogAppConstants.CODE_NOT_FOUND));
         this.userRepo.delete(user);
     }
 }

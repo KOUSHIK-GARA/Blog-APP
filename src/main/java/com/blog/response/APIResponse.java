@@ -1,6 +1,7 @@
 package com.blog.response;
 
 import lombok.*;
+import org.springframework.web.ErrorResponse;
 
 import java.util.List;
 
@@ -16,10 +17,10 @@ public class APIResponse {
     private String status;
     private String message;
     private Object response;
-    private List<ErrorResponse> errors;
+    private List<Object> errors;
 
 
-    public APIResponse(Integer code, String status, String message, List<ErrorResponse> errors) {
+    public APIResponse(Integer code, String status, String message, List<Object> errors) {
         this.code = code;
         this.status = status;
         this.message = message;

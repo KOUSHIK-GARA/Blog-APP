@@ -6,6 +6,7 @@ import com.blog.request.UpdateUsersRequest;
 import com.blog.response.*;
 import com.blog.service.UserService;
 import com.blog.utils.BlogAppConstants;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,21 +20,21 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<APIResponse> registerUser(@RequestBody SignUpRequest request){
+    public ResponseEntity<APIResponse> registerUser(@Valid  @RequestBody SignUpRequest request){
         SignupResponse data = this.userService.createUser(request);
         APIResponse response = new APIResponse(BlogAppConstants.CODE_CREATED,BlogAppConstants.STATUS_CREATED,BlogAppConstants.USER_CREATED,data);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     @PutMapping("/update-user")
-    public ResponseEntity<APIResponse> modifyUser(@RequestBody UpdateUsersRequest request){
+    public ResponseEntity<APIResponse> modifyUser(@Valid @RequestBody UpdateUsersRequest request){
         UpdateUsersResponse data = this.userService.updateUser(request);
         APIResponse response = new APIResponse(BlogAppConstants.CODE_SUCCESS,BlogAppConstants.STATUS_SUCCESS,BlogAppConstants.USER_UPDATED,data);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("/all-users")
-    public ResponseEntity<APIResponse> fetchAllUsers(@RequestBody FetchUsersRequest request){
+    public ResponseEntity<APIResponse> fetchAllUsers(@Valid  @RequestBody FetchUsersRequest request){
         FetchUsersResponse data = this.userService.readAllUsers(request);
         APIResponse response = new APIResponse(BlogAppConstants.CODE_SUCCESS,BlogAppConstants.STATUS_SUCCESS,BlogAppConstants.USER_FETCHED,data);
         return new ResponseEntity<>(response, HttpStatus.OK);
