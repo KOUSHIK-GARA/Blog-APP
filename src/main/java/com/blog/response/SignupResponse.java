@@ -1,15 +1,15 @@
-package com.blog.payload;
+package com.blog.response;
 
 import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class SignupResponse {
+
+    private String userId;
+    private String name;
     private String username;
     private String password;
     private String role;
-    private String about;
+    private String status;
 }

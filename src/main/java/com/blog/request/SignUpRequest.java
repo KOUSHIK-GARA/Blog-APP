@@ -1,15 +1,14 @@
-package com.blog.payload;
+package com.blog.request;
 
 import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @ToString
-public class SignupRequest {
+public class SignUpRequest {
     private String username;
+    private String name;
     private String password;
     private String role;
-    private String about;
+    private String status;
 }
