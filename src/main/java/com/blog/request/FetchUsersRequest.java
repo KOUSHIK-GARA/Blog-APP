@@ -16,7 +16,7 @@ public class FetchUsersRequest {
     @NotNull(message = "userId cannot be null")
     @NotBlank(message = "userId cannot be blank")
     @NotEmpty(message = "userId cannot be empty")
-    private String userId;
+    private Integer userId;
     private String name;
     private String role;
     private String status;

@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
     public SignupResponse createUser(SignUpRequest request) {
        User user = this.modelMapper.map(request,User.class);
         Random rand  =  new Random();
-        user.setUserId(String.valueOf(rand.nextInt(10000)));
+        user.setUserId((rand.nextInt(10000)));
         User savedUser = this.userRepo.save(user);
         return this.modelMapper.map(savedUser, SignupResponse.class);
     }
@@ -81,7 +81,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUser(String userId) {
+    public void deleteUser(Integer userId) {
         User user = this.userRepo.findById(userId).orElseThrow(()-> new UserNotFoundException(BlogAppConstants.USER_NOT_FOUND,BlogAppConstants.CODE_NOT_FOUND));
         this.userRepo.delete(user);
     }
