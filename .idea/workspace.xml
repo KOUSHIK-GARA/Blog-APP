@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec4a24bd-47be-4ac1-a1b8-ada0a4b8e51a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/exception/APIException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/repository/CommentRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/repository/PostRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/request/CommentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/request/PostRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/response/CommentResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/response/PostResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/Impl/CommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/service/Impl/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/repository/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/utils/BlogAppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/utils/BlogAppConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

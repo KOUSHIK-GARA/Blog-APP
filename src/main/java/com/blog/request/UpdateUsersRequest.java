@@ -16,7 +16,7 @@ public class UpdateUsersRequest {
     @NotNull(message = "userId cannot be null")
     @NotBlank(message = "userId cannot be blank")
     @NotEmpty(message = "userId canot be empty")
-    private String userId;
+    private Integer userId;
     private String name;
     private String password;
     private String role;

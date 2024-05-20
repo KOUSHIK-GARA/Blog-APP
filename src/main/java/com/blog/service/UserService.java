@@ -10,5 +10,5 @@ public interface UserService {
     public SignupResponse createUser(SignUpRequest request);
     public UpdateUsersResponse updateUser(UpdateUsersRequest request);
     public FetchUsersResponse readAllUsers(FetchUsersRequest request);
-    public void  deleteUser(String userId);
+    public void  deleteUser(Integer userId);
 }
